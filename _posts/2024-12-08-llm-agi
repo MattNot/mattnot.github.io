@@ -1,0 +1,34 @@
+---
+title: Who Am I.
+tags: ai
+layout: article
+---
+
+### **LLM and AGI**  
+Nowadays, there’s a lot of talk about LLMs (large language models), often in connection with the concept of AGI (Artificial General Intelligence). AGI represents the challenge of creating a general-purpose AI capable of doing everything as well as humans—or even better, in the case of ASI (Artificial Super Intelligence).  
+Notable experiments have already emerged, one of the most famous being BabyAGI (https://x.com/babyagi_?s=21).  
+
+The question I’d like to raise is the following:  
+**Are we sure a language model is what will lead us to this goal?**  
+
+I ask because many overlook a fundamental and self-evident concept: **these models don’t think.**  
+What these models do is one of the most classic tasks in AI: they predict a value. They analyze the "past" and, after a seemingly infinite series of matrix multiplications, output values between 0 and 1, selecting the token with the highest probability.  
+They do it well, they do it efficiently. But they don’t reason. For instance, they know that 2+2=4 simply because, countless times in the training dataset, the characters “2,” “+,” “2,” and “=” were always followed by the character “4.” For fans of alternative rock, there’s also “5” (https://youtu.be/2w6kHS_IRrE?si=4P46sbNn2XGCrRai).  
+And what if the model’s creators were big fans of alternative rock? We might have ended up with a ChatGPT where 2+2=5. In fact, early versions of ChatGPT didn’t know how to do math at all. And even now, it’s not guaranteed that it truly understands math—it’s highly likely that an external logic kicks in whenever math is required.  
+Of course, this is an exaggeration: data scientists are skilled and know how to create a balanced dataset.  
+
+Some might argue that reasoning is nothing more than predicting the next thing to say or think.  
+I respond by saying that art and even problem-solving wouldn’t exist if the very concept of reasoning were so simplistic.  
+Art—in all its forms, including programming (https://it.m.wikipedia.org/wiki/The_Art_of_Computer_Programming)—is a generative process. It doesn’t predict the “next thing to do” based on something already known (e.g., 2+2=), but it **creates** the next action, attempting not to resemble something already familiar.  
+A language model doesn’t do this; it cannot invent something new. Everything that comes out of its final layer is just a number associated with a token it already knows. It’s a closed world.  
+
+Moreover, LLMs have a very basic limitation: they know what they’re about to say and what they’ve already said, but not what they will say in the next few words. This is why models like GPT sometimes repeat themselves. They lack what, in the world of Regular Expressions, is called a "positive lookahead."  
+
+Accepting that an LLM could be AGI means admitting that we have nothing left to discover and that if something remains unknown, it’s only because human inductive reasoning hasn’t yet reached that conclusion.  
+I really like this image to describe what I mean:  
+
+An LLM stops at knowledge. A human has the power of intuition and even **error.** Without error, there would be no penicillin; without intuition, there would be nothing.  
+
+--- 
+
+Se hai bisogno di modifiche o aggiunte, fammi sapere!
