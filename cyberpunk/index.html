@@ -163,7 +163,7 @@
         }
         
         .act.active .act-content {
-            max-height: 500px;
+            max-height: 2000px;
         }
         
         .act-links {
@@ -191,6 +191,118 @@
             box-shadow: 0 0 15px rgba(0,255,159,0.3);
         }
         
+        /* Stili per le utilities */
+        .utility-grid {
+            padding: 25px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .utility-card {
+            background: rgba(0,255,159,0.03);
+            border: 2px solid rgba(0,255,159,0.3);
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .utility-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0,255,159,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .utility-card:hover::before {
+            left: 100%;
+        }
+        
+        .utility-card:hover {
+            border-color: #00ff9f;
+            box-shadow: 
+                0 0 20px rgba(0,255,159,0.4),
+                inset 0 0 20px rgba(0,255,159,0.05);
+            transform: translateY(-5px);
+        }
+        
+        .utility-icon {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 15px;
+            color: #ff0064;
+            text-shadow: 0 0 15px #ff0064;
+        }
+        
+        .utility-name {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2em;
+            color: #00ff9f;
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 0 0 8px #00ff9f;
+        }
+        
+        .utility-description {
+            font-size: 0.9em;
+            color: #888;
+            text-align: center;
+            line-height: 1.5;
+        }
+        
+        .utility-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 1px solid rgba(0,255,159,0.3);
+            margin-top: 10px;
+            filter: brightness(0.8) contrast(1.2);
+            transition: all 0.3s ease;
+        }
+        
+        .utility-card:hover .utility-image {
+            filter: brightness(1) contrast(1.3);
+            border-color: #00ff9f;
+            box-shadow: 0 0 15px rgba(0,255,159,0.3);
+        }
+        
+        .text-box {
+            background: rgba(10,10,10,0.8);
+            border: 1px solid rgba(0,255,159,0.2);
+            border-radius: 4px;
+            padding: 15px;
+            margin-top: 10px;
+            font-size: 0.9em;
+            line-height: 1.6;
+            color: #00ff9f;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .text-box::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .text-box::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.5);
+        }
+        
+        .text-box::-webkit-scrollbar-thumb {
+            background: #ff0064;
+            border-radius: 4px;
+        }
+        
+        .text-box::-webkit-scrollbar-thumb:hover {
+            background: #00ff9f;
+        }
+        
         .placeholder-text {
             padding: 25px;
             color: #666;
@@ -211,6 +323,10 @@
             .act-title {
                 font-size: 1.3em;
             }
+            
+            .utility-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -224,6 +340,48 @@
         </header>
         
         <div class="acts-container">
+            <!-- Sezione Utilities -->
+            <div class="act">
+                <div class="act-header" onclick="toggleAct(this)">
+                    <div class="act-title">UTILITIES</div>
+                    <div class="act-icon">▶</div>
+                </div>
+                <div class="act-content">
+                    <div class="utility-grid">
+                        <!-- Card con immagine -->
+                        <div class="utility-card">
+                            <div class="utility-icon">📷</div>
+                            <div class="utility-name">Cheatsheet</div>
+                            <img src="https://i.redd.it/dt2hsere4gga1.png" alt="Immagine 1" class="utility-image" onerror="this.style.display='none'">
+                        </div>
+                        
+                        <!-- Card con testo -->
+                        <div class="utility-card">
+                            <div class="utility-icon">📝</div>
+                            <div class="utility-name">NOTE OPERATIVE</div>
+                            <div class="text-box">
+                            </div>
+                        </div>
+                        
+                        <!-- Card con immagine -->
+                        <div class="utility-card">
+                            <div class="utility-icon">🎯</div>
+                            <div class="utility-name">MAPPA ZONA</div>
+                            <div class="utility-description">Layout dell'area operativa</div>
+                        </div>
+                        
+                        <!-- Card con testo -->
+                        <div class="utility-card">
+                            <div class="utility-icon">⚠️</div>
+                            <div class="utility-name">AVVISI</div>
+                            <div class="text-box">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sezione Atto 1 -->
             <div class="act">
                 <div class="act-header" onclick="toggleAct(this)">
                     <div class="act-title">ATTO 1</div>
